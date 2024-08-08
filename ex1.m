@@ -38,6 +38,16 @@ for i = 1: length(w)
     s2 = s2 + w(i);
 end
 
+% there is a more general usage of for loops
+% loop_var = array, where loop_var takes on the values in the array
+% sequentially.
+
+arr = 'abc';
+arr = {'Coco', 'had', 'big', 'feast'};
+for z = arr
+    disp(z)
+end
+
 % But when the operation is complicated, copying and pasting quickly makes
 % your code unreasonably lengthy. In addition, if you discover in the
 % future a mistake in this operation, you need to change every one of the
@@ -48,6 +58,23 @@ disp('Comparing s with the function output: ')
 disp(s == mysum(v));
 disp('Comparing s2 with the function output: ')
 disp(s2 == mysum(w));
+
+% write a function that contains a control flow
+patient.id = 1;
+patient.gender = 'female';
+patient.name = 'Sophie';
+patient.age = 18;
+patient.nm = 5;
+patient.pupil_measurements = [1.2 3.4 2.5 6.5 4.3];
+patient.blinks = [1 0 1 0 1];
+patient.responses = {'cold', 'tasty', 'hot', 'dull', 'EXCITED'};
+
+% string formating function as filling in the blanks to a template
+% (structure) string
+fprintf('Coco is %d years old and likes eating %s \n', 21, 'papayas')
+
+readpt(patient)
+
 
 
 
